@@ -392,48 +392,8 @@ window.addEventListener( "load", function( event ) {
 		sibling.parentElement.insertBefore( skipLink, sibling );
 	}() );
 	
+
 </script>
-
-	<script type="text/javascript">
-		(function () {
-			var wpcom_reblog = {
-				source: 'toolbar',
-
-				toggle_reblog_box_flair: function (obj_id, post_id) {
-
-					// Go to site selector. This will redirect to their blog if they only have one.
-					const postEndpoint = `https://wordpress.com/post`;
-
-					// Ideally we would use the permalink here, but fortunately this will be replaced with the 
-					// post permalink in the editor.
-					const originalURL = `${ document.location.href }?page_id=${ post_id }`; 
-					
-					const url =
-						postEndpoint +
-						'?url=' +
-						encodeURIComponent( originalURL ) +
-						'&is_post_share=true' +
-						'&v=5';
-
-					const redirect = function () {
-						if (
-							! window.open( url, '_blank' )
-						) {
-							location.href = url;
-						}
-					};
-
-					if ( /Firefox/.test( navigator.userAgent ) ) {
-						setTimeout( redirect, 0 );
-					} else {
-						redirect();
-					}
-				},
-			};
-
-			window.wpcom_reblog = wpcom_reblog;
-		})();
-	</script>
 <script type="text/javascript">
 // <![CDATA[
 (function() {
@@ -450,14 +410,6 @@ try{
   }
 }catch(e){}
 })();
-// ]]>
-</script><script src="//stats.wp.com/w.js?67" defer></script> <script type="text/javascript">
-_tkq = window._tkq || [];
-_stq = window._stq || [];
-_tkq.push(['storeContext', {'blog_id':'237005056','blog_tz':'2','user_lang':'es','blog_lang':'es','user_id':'0'}]);
-_stq.push(['view', {'blog':'237005056','v':'wpcom','tz':'2','user_id':'0','subd':'voltaiinnovationssl'}]);
-_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5QmRXZzE3RC9rQWZHK1FjbDltdWdaMVFFZTcxUGVHLWR0WTJoRE4yRzJvYURSbU5IMlRMUHpbbGgxcT9mTjNaLyV+TDAralZhP0NlQlQzT0ElMG51cUptPys1OHg3dDFkeGhBNjd6K00zSS42TFpmcV83RWxMWH5QVWxdSm58Zz9jOCY/Zks1azFLSnwtPzJ3RjF4dX5xJjAwJWZZc3oyfFFJZ0k/Sm1YYSZVMXNxUSx1Jkk1NEYrUzlZPV0mN08vaSs='}]);
-_stq.push([ 'clickTrackerInit', '237005056', '0' ]);
 </script>
 <noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
 </script><script>
